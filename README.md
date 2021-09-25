@@ -63,10 +63,11 @@ This application is intended for learning and entertainment purposes. **We don't
 
 1. Download repository
 2. Open repository folder in VS Code
-3. Open new terminal in VS Code (Ctrl+Shift+`)
-4. Run command: "npm install"
-5. Run command: "npm start" 
-6. Open browser and go to address: http://localhost:3000
+3. Create an .env file and paste values given in presentation (security requirements)
+4. Open new terminal in VS Code (Ctrl+Shift+`)
+5. Run command: "npm install"
+6. Run command: "npm start" 
+7. Open browser and go to address: http://localhost:3000
 
 ### Images from app
 
