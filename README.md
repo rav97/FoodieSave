@@ -71,26 +71,26 @@ This application is intended for learning and entertainment purposes. **We don't
 ### Images from app
 
 1. Homepage
-![Homepage](https://github.com/rav97/FoodieSave/blob/main/HomePage.png?raw=true)
+![Homepage](https://raw.githubusercontent.com/rav97/FoodieSave/main/GitImages/HomePage.png)
 
 2. Search
-![Search](https://github.com/rav97/FoodieSave/blob/main/Search.png?raw=true)
+![Search](https://github.com/rav97/FoodieSave/blob/main/GitImages/Search.png?raw=true)
 
 3. Search results
-![Seaarch results](https://github.com/rav97/FoodieSave/blob/main/SearchResults.png?raw=true)
+![Seaarch results](https://github.com/rav97/FoodieSave/blob/main/GitImages/SearchResults.png?raw=true)
 
 4. Recipe page
-![Recipe pt.1](https://github.com/rav97/FoodieSave/blob/main/RecipePt1.png?raw=true)
-![Recipe pt.2](https://github.com/rav97/FoodieSave/blob/main/RecipePt2.png?raw=true)
+![Recipe pt.1](https://github.com/rav97/FoodieSave/blob/main/GitImages/RecipePt1.png?raw=true)
+![Recipe pt.2](https://github.com/rav97/FoodieSave/blob/main/GitImages/RecipePt2.png?raw=true)
 
 5. Registration
-![Registration](https://github.com/rav97/FoodieSave/blob/main/SignUp.png?raw=true)
+![Registration](https://github.com/rav97/FoodieSave/blob/main/GitImages/SignUp.png?raw=true)
 
 6. Login
-![Login](https://github.com/rav97/FoodieSave/blob/main/LogIn.png?raw=true)
+![Login](https://github.com/rav97/FoodieSave/blob/main/GitImages/LogIn.png?raw=true)
 
 7. User Profile
-![User profile](https://github.com/rav97/FoodieSave/blob/main/Profile.png?raw=true)
+![User profile](https://github.com/rav97/FoodieSave/blob/main/GitImages/Profile.png?raw=true)
 
 8.  Favorites
-![Favorites](https://github.com/rav97/FoodieSave/blob/main/Favorites.png?raw=true)
+![Favorites](https://github.com/rav97/FoodieSave/blob/main/GitImages/Favorites.png?raw=true)
