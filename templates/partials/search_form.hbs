@@ -1,0 +1,12 @@
+<form action="/search">
+	<div class="input-group">
+		<input type="text" name="searchText" class="form-control {{#if large}}form-control-lg{{/if}}" 
+				placeholder="Type in products you own and prevent food waste :)" required>
+		<div class="input-group-append">
+			<button type="submit" class="btn btn-success">Search</button>
+		</div>
+	</div>
+	
+	{{!-- This form always send a request for the first results page. --}}
+	<input type="hidden" name="pageNumber" value="1">
+</form>

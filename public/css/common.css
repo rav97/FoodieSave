@@ -1,0 +1,34 @@
+body {
+	background: 
+		linear-gradient(
+			rgba(213, 213, 213, 0.55),
+			rgba(213, 213, 213, 0.55)
+		),
+		url("../img/background.jpg") fixed;
+	background-size: cover;
+}
+
+.container {
+	min-height: 100vh;
+	background: #f0f0f0;
+}
+
+/* - Navbar -  */
+
+.navbar {
+	font-size: 1.3em;
+}
+
+.img-navbar {
+	max-width: 60px;
+}
+
+.navbar-brand {
+	padding: 5px;
+}
+
+/*  */
+
+a:hover {
+	text-decoration: none;
+}

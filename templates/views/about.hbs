@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<base href="/">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/about.css">
+		<title>About</title>
+	</head>
+	<body>
+
+		{{#if user}}
+			{{>auth_nav}}
+		{{else}}
+			{{>unauth_nav}}
+		{{/if}}
+
+		<div class="container">
+
+			<h1>About</h1>
+
+			<section>
+				<h2>Authors:</h2>
+				<ul>
+					<li>Rafał Isbrandt</li>
+					<li>Jakub Hamerliński</li>
+					<li>Natalia Gierszewska</li>
+					<li>Małgorzata Marczyk</li>
+				</ul>
+			</section>
+
+			<hr>
+
+			<section>
+				<h2>FoodieSave goals:</h2>
+				<p>
+
+FoodieSave is a web application that in its core functionality, aims to help reduce food waste. It is targeted to "people who cook" in households or who are looking for 
+inspiration to prepare a meal from products available at home. The premise of the product is to present a base of recipes with the option of suggesting specific recipes based 
+on the provided list of ingredients. On its basis, the website will present meals that can be prepared from the owned products. Current version of service offers just some basic 
+functionality related to finding recipes and add them to favorites. This functionality still needs some more work, but we hope it will change soon. 
+
+				</p>
+			</section>
+
+			<hr>
+
+			<section>
+				<h2>Description:</h2>
+				<p>
+
+This website is our final project for Digital Product class and has purely educational purposes for us. 
+It was an opportunity for each of us to develop our skills and learn something new. We acquired more knowledge about using the <a href="https://nodejs.org/">Node.js</a> and <a href="https://expressjs.com/">Express.js</a> framework. 
+And also about the use of No-SQL databases such as <a href="https://www.mongodb.com/">MongoDB</a> and processing data from external APIs.<br><br>
+
+The technologies and some tools used to construct this site are listed in the section below.<br><br>
+
+The information pertinent to the recipes shown on this website, such as recipe names, descriptions, ingredients, 
+ingredient images, and preparing instructions, are fetched from the <a href="https://spoonacular.com/food-api">Spoonacular</a> food and recipes API.<br><br>
+
+<b class="text-danger">This website was built with the only purposes of learning and entertainment. We do not recommend you to prepare any food based on the recipes presented here. Not right now.</b><br><br>
+
+				</p>
+			</section>
+
+			<hr>
+
+			<section>
+				<h2>Technologies used:</h2>
+				<ul class="technologies-list">
+					<li><b>Front-end:</b>
+						<p>HTML5, CSS3, JavaScript, <a href="https://getbootstrap.com/">Bootstrap 4.4.1</a></p>
+					</li>
+					<li><b>Back-end:</b>
+						<p>
+							<a href="https://nodejs.org/">Node.js</a>, 
+							<a href="https://expressjs.com/">Express.js</a>, 
+							<a href="https://www.mongodb.com/">MongoDB</a>, 
+							<a href="https://mongoosejs.com/">Mongoose</a>, 
+							<a href="https://handlebarsjs.com/">Handlebars</a>, 
+							<a href="https://jwt.io/">JSON Web Tokens</a>.
+						</p>
+					</li>
+					<li><b>Hosting:</b>
+						<ul>
+							<li>The production MongoDB database is hosted on <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>.</li>
+							<li>The source code is publicly hosted <a href="https://github.com/rav97/FoodieSaveRemaster">on a GitHub repository</a>.</li>
+						</ul>
+					</li>
+					<li><b>External APIs:</b>
+						<ul>
+							<li><a href="https://spoonacular.com/food-api">Spoonacular API</a>.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<hr>
+
+			<section>
+				<h2>Assets credits:</h2>
+				<ul class="list-group list-group-flush text-center">
+					<li class="list-group-item"><h5>Home page, navbar and favicon logo:</h5>
+						<ul class="list-inline">
+							<li><img src="img/logo.png" class="img-fluid"></li>
+							<li><a href="https://www.freelogodesign.org/">https://www.freelogodesign.org/</a></li>
+						</ul>
+					</li>
+					<li class="list-group-item"><h5>Background image:</h5>
+						<ul class="list-inline">
+							<li><img src="img/background.jpg" class="img-fluid"></li>
+							<li><a href="https://www.pexels.com/">https://www.pexels.com/</a></li>
+							<li>Photo by Burst on Pexels</li>
+						</ul>
+					</li>
+					<li class="list-group-item">
+						All the information and images related to recipes and ingredients are obtained from the <a href="https://spoonacular.com/food-api">Spoonacular API</a>.<br>
+						References to the original source of each recipe are shown as provided by Spoonacular at the bottom of the recipe page.
+					</li>
+				</ul>
+			</section>
+
+		</div>
+
+		{{!-- Bootstrap required scripts: --}}
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>

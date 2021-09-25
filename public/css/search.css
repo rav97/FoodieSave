@@ -1,0 +1,55 @@
+.container {
+	padding-bottom: 70px;
+}
+
+.card {
+	margin: 15px 7px;
+}
+
+.card-header {
+	padding: 7px 15px;
+}
+.card-body {
+	padding: 7px;
+}
+.card-footer {
+	padding: 5px 15px;
+}
+
+.card-header h5 {
+	font-weight: bold;
+	margin: 0;
+}
+
+.card-footer .badge {
+	font-size: 0.9em;
+}
+
+/*  */
+
+h2 {
+	padding: 10px;
+}
+
+/*  */
+
+@media (max-width: 390px) {
+	.pag-not-required {
+		display: none;
+	}
+	.page-link {
+		padding: 8px;
+	}
+}
+
+@media (max-width: 569px) {
+	.result-image {
+		width: 100%;
+	}
+}
+
+@media (min-width: 570px) {
+	.result-image {
+		float: left;
+	}
+}

@@ -1,0 +1,13 @@
+{{!-- Render search results on search.hbs view. --}}
+{{#each results}}
+	  <div class="col">
+		<div class="card" style="width: 15rem; margin: 10px 5px; height:18rem">
+		<a href="/recipe?id={{this.id}}"><img src="{{this.image}}" class="card-img-top" alt="..."></a>
+		<a href="/recipe?id={{this.id}}">
+			<div class="card-body">
+				<h5 class="card-title" style="color: black">{{{this.title}}}</h5>
+			</div>
+		</a>
+		</div>
+	</div>
+{{/each}}

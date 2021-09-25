@@ -1,0 +1,33 @@
+@media (min-width: 540px) and (max-width: 991px) {
+	.responsive-list {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}	
+}
+@media (min-width: 992px) {
+	.responsive-list {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}	
+}
+
+/*  */
+
+.container {
+	background: #fff;
+	padding-bottom: 30px;
+}
+
+.row {
+	padding: 10px 20px 2px 20px;
+}
+
+/*  */
+
+.info-list > li {
+	padding-bottom: 15px;
+	font-size: 1.1em;
+	font-style: italic;
+}

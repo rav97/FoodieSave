@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<base href="/">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/recipe.css">
+		<title>Recipe</title>
+	</head>
+	<body>
+
+		{{#if user}}
+			{{>auth_nav}}
+		{{else}}
+			{{>unauth_nav}}
+		{{/if}}
+
+		<div class="container">
+			
+			{{!-- Title: --}}
+			<div class="row">
+				<h2>
+					{{response.title}}
+					{{#if user}}
+						<span id="fav-badge" class="badge badge-warning ml-3 {{#unless isFav}}d-none{{/unless}}">Favorite</span>
+						<button id="fav-button" recipeId={{response.id}} class="btn btn-primary ml-3 {{#if isFav}}d-none{{/if}}">Add to Favorites</button> 
+					{{/if}}
+				</h2>
+			</div>
+
+			<hr>
+
+			{{!-- Image and info: --}}
+			<div class="row">
+				<div class="col-md">
+					<img src={{response.image}} class="img-fluid">
+				</div>
+				<div class="col-md">
+					<ul class="info-list">
+						<li>Ready in {{response.readyInMinutes}} minutes.</li>
+						<li>Servings: {{response.servings}}.</li>
+						{{#if response.dishTypes}}
+							<li>Dish types:
+								<ul class="responsive-list">
+									{{#each response.dishTypes}}
+										<li>{{this}}</li>
+									{{/each}}
+								</ul>
+							</li>
+						{{/if}}
+						{{#if response.cuisines}}
+							<li>Cuisines:
+								<ul class="responsive-list">
+									{{#each response.cuisines}}
+										<li>{{this}}</li>
+									{{/each}}
+								</ul>
+							</li>
+						{{/if}}
+						{{#if response.winePairing.pairedWines}}
+							<li>Wine Pairing:
+								<ul class="responsive-list">
+									{{#each response.winePairing.pairedWines}}
+										<li>{{this}}</li>
+									{{/each}}
+								</ul>
+							</li>
+						{{/if}}
+					</ul>
+				</div>
+			</div>
+
+			<hr>
+
+			{{!-- Description --}}
+			<div class="row">
+				<div class="col-12">
+					<h3>Description</h3>
+					{{#if response.summary}}
+						<p>{{{response.summary}}}</p>
+					{{else}}
+						No description for this recipe.
+					{{/if}}
+				</div>
+			</div>
+
+			<hr>
+
+			{{!-- Ingredients --}}
+			<div class="row">
+				<div class="col-12">
+					<h3>Ingredients</h3>
+					{{#if response.extendedIngredients}}
+						<ul class="list-group list-group-flush">
+							{{#each response.extendedIngredients}}
+								<li class="list-group-item">
+									<img src="https://spoonacular.com/cdn/ingredients_100x100/{{this.image}}" class="img-fluid">
+									{{this.original}}
+								</li>
+							{{/each}}
+						</ul>
+					{{else}}
+						No ingredients provided for this recipe!
+					{{/if}}
+				</div>
+			</div>
+
+			<hr>
+
+			{{!-- Instructions --}}
+			<div class="row">
+				<div class="col-12">
+					<h3>Instructions</h3>
+					{{#if response.instructionsSteps}}
+						<ul class="list-group list-group-flush">
+							{{#each response.instructionsSteps}}
+								<li class="list-group-item">
+									<h6>Step {{this.number}}</h6>
+									{{this.step}}
+								</li>
+							{{/each}}
+						</ul>
+					{{else}}
+						No instructions provided for this recipe!
+					{{/if}}
+				</div>
+			</div>
+
+			<hr>
+
+			{{!-- Source --}}
+			<div class="row">
+				<div class="col-12">
+					<h5>Credits for this recipe</h5>
+					{{#if response.hasSource}}
+						<ul>
+						{{#if response.sourceUrl}}
+							<li>Source URL: <a href={{response.sourceUrl}}>{{response.sourceUrl}}</a></li>
+						{{/if}}
+						{{#if response.sourceName}}
+							<li>Source Name: {{response.sourceName}}</li>
+						{{/if}}
+						{{#if response.creditsText}}
+							<li>Credits Text: {{response.creditsText}}</li>
+						{{/if}}
+						</ul>
+					{{else}}
+						No source information provided for this recipe!
+					{{/if}}
+				</div>
+			</div>
+
+		</div>
+
+		{{#if user}}
+			<script src="js/recipe.js"></script>
+		{{/if}}
+
+		{{!-- Bootstrap required scripts: --}}
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>
